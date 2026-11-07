@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literary Analyses | My Literary Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="profile.html" class="logo">My Literary Journey</a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" id="navToggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="profile.html">Home</a></li>
+                <li><a href="analyses.html" class="active">Literary Analyses</a></li>
+                <li><a href="favorite.html">Favorite Masterpiece</a></li>
+                <li><a href="summary.html">Summary of Learning</a></li>
+                <li><a href="reflection.html">Personal Reflection</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><svg class="theme-icon sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="theme-icon moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="analyses" class="section bg-alt">
+        <div class="container">
+            <div class="section-header-block">
+                <div class="chapter-kicker">Chapter I &middot; Critical Perspectives</div>
+                <h2 class="section-title">Compilation of Literary Analyses</h2>
+                <p class="section-subtitle">Thirteen literary masterpieces analyzed through distinct critical lenses.</p>
+            </div>
+
+            <div class="analyses-toolbar">
+                <div class="filter-pills" role="tablist" aria-label="Filter analyses by critical lens">
+                    <button class="filter-btn active" data-filter="all">All Works (13)</button>
+                    <button class="filter-btn" data-filter="archetypal">Cultural &amp; Archetypal</button>
+                    <button class="filter-btn" data-filter="existential">Existential &amp; Philosophical</button>
+                    <button class="filter-btn" data-filter="feminist">Feminist &amp; Aesthetic</button>
+                    <button class="filter-btn" data-filter="social">Social Realism &amp; Postmodern</button>
+                    <button class="filter-btn" data-filter="classical">Classical &amp; Didactic</button>
+                </div>
+                <div class="analyses-counter" id="analysesCounter">Showing 13 of 13 Masterpiece Analyses</div>
+            </div>
+
+            <div class="analyses-grid" id="analysesGrid"></div>
+        </div>
+    </section>
+
+    <div class="modal" id="readerModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-bg-cover" id="modalBgCover" aria-hidden="true"></div>
+            <button class="modal-close" id="modalClose" aria-label="Close reader">&times;</button>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Title</h2>
+                    <p class="modal-author" id="modalAuthor">Author</p>
+                    <span class="modal-lens" id="modalLens">Lens</span>
+                </div>
+                <div class="modal-text" id="modalText"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-nav-btn" id="modalPrevBtn">&larr; Previous Analysis</button>
+                <button class="modal-nav-btn" id="modalNextBtn">Next Analysis &rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-nav">
+                    <li><a href="profile.html">Home</a></li>
+                    <li><a href="analyses.html">Literary Analyses</a></li>
+                    <li><a href="favorite.html">Favorite Masterpiece</a></li>
+                    <li><a href="summary.html">Summary of Learning</a></li>
+                    <li><a href="reflection.html">Personal Reflection</a></li>
+                </ul>
+                <div class="footer-attribution">
+                    <p>&copy; 4th Year(BSIT) Michael Harvey C. Saturius. Student Portfolio &mdash; Great Books Course. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
