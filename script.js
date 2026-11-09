@@ -172,7 +172,6 @@ const analyses = [
     }
 ];
 
-
 const navLinks = document.getElementById('navLinks');
 const navToggle = document.getElementById('navToggle');
 const themeToggle = document.getElementById('themeToggle');
@@ -199,7 +198,6 @@ const backToTopBtn = document.getElementById('backToTop');
 let currentActiveFilter = 'all';
 let currentModalIndex = 0;
 let lastFocused = null;
-
 
 function el(tag, className, text) {
     const node = document.createElement(tag);
@@ -262,7 +260,7 @@ function renderCards() {
     if (counterEl) {
         counterEl.textContent = 'Showing ' + visible.length + ' of ' + analyses.length + ' Masterpiece Analyses';
         counterEl.classList.remove('tick');
-        void counterEl.offsetWidth; // restart the fade
+        void counterEl.offsetWidth;
         counterEl.classList.add('tick');
     }
 
@@ -292,7 +290,6 @@ filterBtns.forEach(btn => {
 
 renderCards();
 
-
 function updateModalContent(index) {
     if (!modal || index < 0 || index >= analyses.length) return;
     currentModalIndex = index;
@@ -311,7 +308,7 @@ function updateModalContent(index) {
     if (modalBody) {
         modalBody.scrollTop = 0;
         modalBody.classList.remove('swap-in');
-        void modalBody.offsetWidth; // restart the swap animation
+        void modalBody.offsetWidth;
         modalBody.classList.add('swap-in');
     }
     updateModalProgress();
@@ -376,7 +373,7 @@ document.addEventListener('keydown', (e) => {
     else if (e.key === 'ArrowLeft') updateModalContent(currentModalIndex - 1);
     else if (e.key === 'ArrowRight') updateModalContent(currentModalIndex + 1);
     else if (e.key === 'Tab') {
-        // keep focus inside the dialog
+
         const items = [...modal.querySelectorAll('button:not(:disabled)')];
         if (!items.length) return;
         const first = items[0];
@@ -393,7 +390,6 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
-
 
 if (navToggle && navLinks) {
     const setNav = (open) => {
@@ -420,7 +416,6 @@ if (navToggle && navLinks) {
     });
 }
 
-
 const savedTheme = localStorage.getItem('theme');
 const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -439,8 +434,6 @@ if (themeToggle) {
     });
 }
 
-
-// One rAF-throttled scroll handler: navbar state, back-to-top ring
 const navbar = document.getElementById('navbar');
 
 let scrollTicking = false;
@@ -468,7 +461,6 @@ if (backToTopBtn) {
     });
 }
 
-// Scroll reveal: fade blocks in once, then drop the classes so hover transforms work
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reduceMotion && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {

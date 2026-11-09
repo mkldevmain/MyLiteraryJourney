@@ -1378,7 +1378,6 @@ body.dark-mode .modal-bg-cover {
     }
 }
 
-/* Accessibility polish */
 :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
@@ -1403,7 +1402,6 @@ body.dark-mode .modal-bg-cover {
     }
 }
 
-/* UI polish (theme-preserving) */
 h1, h2, h3 { text-wrap: balance; }
 p { text-wrap: pretty; }
 
@@ -1476,13 +1474,9 @@ p { text-wrap: pretty; }
     .read-btn:hover span:last-child { transform: none; }
 }
 
-/* ---- Bookish UI pass ---- */
-
-/* Fluid type */
 .hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.8rem); letter-spacing: -0.015em; }
 .section-title { font-size: clamp(1.9rem, 4vw, 2.5rem); }
 
-/* Hero quote: a pull-quote on the page, not a card */
 .hero-quote {
     position: relative;
     background: none;
@@ -1504,7 +1498,6 @@ p { text-wrap: pretty; }
     opacity: 0.7;
 }
 
-/* Cards read as book pages: tighter corners, one rounded exception (pills) */
 .analysis-card,
 .profile-subsection,
 .feature-card,
@@ -1513,7 +1506,6 @@ p { text-wrap: pretty; }
 .nav-card-link { border-radius: 4px; }
 .analysis-card .card-image { border-radius: 2px; }
 
-/* Covers look bound: spine shade on the left edge */
 .analysis-card .card-image {
     position: relative;
     box-shadow: var(--shadow-md);
@@ -1526,10 +1518,8 @@ p { text-wrap: pretty; }
     background: linear-gradient(90deg, rgba(0,0,0,0.28) 0, rgba(255,255,255,0.12) 3%, transparent 8%);
 }
 
-/* Card title: tell the card apart by its author, not extra chrome */
 .analysis-card h3 { font-size: 1.3rem; }
 
-/* Reader modal: made for reading */
 .modal-content { border-radius: 6px; }
 .modal-text {
     font-family: Georgia, 'Times New Roman', serif;
@@ -1546,7 +1536,6 @@ p { text-wrap: pretty; }
     font-weight: 700;
 }
 
-/* Quieter page chrome */
 .section-title::after { width: 40px; height: 2px; }
 .footer { background: var(--bg-secondary); }
 
@@ -1555,11 +1544,9 @@ p { text-wrap: pretty; }
     .hero-quote { padding-top: 40px; }
 }
 
-/* ---- Pass 2: readability, motion, reader ---- */
 :root {
     --measure: 68ch;
-    --gold-text: #7F5A14;          /* gold that passes 4.5:1 as small text on cream */
-}
+    --gold-text: #7F5A14;}
 body.dark-mode { --gold-text: #D8A944; }
 
 body { font-size: 1.0625rem; line-height: 1.8; }
@@ -1578,7 +1565,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
 }
 .skip-link:focus { top: 12px; color: #fff; }
 
-/* Quiet labels: sentence case, no pills, no glyphs */
 .chapter-kicker,
 .hero-badge,
 .spotlight-ribbon {
@@ -1605,7 +1591,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
 .spotlight-author,
 .modal-author { color: var(--gold-text); }
 
-/* Long-form text: comfortable measure */
 .profile-subsection p,
 .spotlight-text p,
 .highlight-block p,
@@ -1613,7 +1598,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
 .reflection-answer { max-width: var(--measure); }
 .profile-subsection:first-child p { font-size: 1.12rem; }
 
-/* Navbar: shrinks on scroll, progress bar, animated menu */
 .nav-container { transition: height var(--transition); }
 .navbar { transition: box-shadow var(--transition), background-color var(--transition); }
 .navbar.scrolled { box-shadow: var(--shadow-sm); }
@@ -1641,7 +1625,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
     }
 }
 
-/* Motion: one entrance on the hero, one reveal per block */
 @keyframes rise {
     from { opacity: 0; transform: translateY(14px); }
 }
@@ -1657,7 +1640,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
 }
 .reveal.in { opacity: 1; transform: none; }
 
-/* Home */
 .photo-frame {
     border: none;
     padding: 8px;
@@ -1670,7 +1652,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
 .nav-card-title span { transition: transform var(--transition-fast); }
 .nav-card-link:hover .nav-card-title span { transform: translateX(4px); }
 
-/* Analyses: sticky filters, staggered cards, fading covers */
 .analyses-toolbar {
     position: sticky;
     top: 60px;
@@ -1686,8 +1667,7 @@ body { font-size: 1.0625rem; line-height: 1.8; }
 .analysis-card .card-image { height: auto; aspect-ratio: 3 / 4; }
 .analysis-card .card-image img { opacity: 0; object-fit: contain; object-position: center; transition: opacity 0.5s ease, transform var(--transition-slow); }
 .analysis-card .card-image img.loaded { opacity: 1; }
-.analysis-card .card-image::after { display: none; } /* spine shade misaligns with letterboxed covers */
-.analysis-card .lens-badge {
+.analysis-card .card-image::after { display: none; }.analysis-card .lens-badge {
     text-transform: none;
     letter-spacing: 0;
     font-size: 0.8rem;
@@ -1702,7 +1682,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
     overflow: hidden;
 }
 
-/* Reader modal */
 .modal-content { max-height: min(90vh, 90dvh); }
 .modal-body { flex: 1; min-height: 0; max-height: none; }
 .modal-body.swap-in { animation: rise 0.4s ease-out backwards; }
@@ -1731,7 +1710,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
     .modal-nav-btn { padding: 8px 12px; font-size: 0.8rem; }
 }
 
-/* Favorite */
 .spotlight-image {
     transform: perspective(900px) rotateY(-6deg);
     transform-origin: left center;
@@ -1759,18 +1737,15 @@ body { font-size: 1.0625rem; line-height: 1.8; }
     background: var(--gold);
 }
 
-/* Summary */
 .feature-card { border-top: 1px solid var(--card-border); transition: border-color var(--transition); }
 .feature-card:hover { border-color: var(--accent); }
 
-/* Reflection: answer reads as prose, not a box in a box */
 .reflection-answer {
     background: none;
     border-radius: 0;
     padding: 2px 0 2px 22px;
 }
 
-/* Back-to-top with progress ring */
 .back-to-top {
     background:
         radial-gradient(circle, var(--card-bg) 62%, transparent 63%),
@@ -1783,7 +1758,6 @@ body { font-size: 1.0625rem; line-height: 1.8; }
         conic-gradient(var(--accent) calc(var(--p, 0) * 1%), var(--border-color) 0);
 }
 
-/* Footer */
 .footer { padding: 36px 0 28px; }
 .footer-attribution p { font-size: 0.85rem; line-height: 1.6; }
 
