@@ -18,8 +18,8 @@
     --brass-soft: rgba(176, 141, 60, 0.35);
     --sage: #5E7A66;
 
-    --footer-bg: #14213D;
-    --footer-ink: #DCD5C2;
+    --footer-bg: #F1ECE0;
+    --footer-ink: #2F3A57;
 
     --shadow-sm: 0 1px 2px rgba(20, 33, 61, 0.08);
     --shadow: 0 6px 18px rgba(20, 33, 61, 0.12);
@@ -322,7 +322,7 @@ body.dark-mode .moon-icon { opacity: 1; transform: none; }
 .footer-content { display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center; }
 .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; list-style: none; }
 .footer-nav a { color: var(--footer-ink); font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; }
-.footer-nav a:hover { color: var(--brass); }
+.footer-nav a:hover { color: var(--accent); }
 .footer-attribution p { color: var(--footer-ink); opacity: 0.8; font-size: 0.9rem; font-style: italic; line-height: 1.6; }
 
 .back-to-top { position: fixed; bottom: 26px; right: 26px; z-index: 999; width: 46px; height: 46px; border: 0; border-radius: 50%; color: var(--ink); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity var(--t), color var(--t); background: radial-gradient(circle, var(--surface) 62%, transparent 63%), conic-gradient(var(--accent) calc(var(--p, 0) * 1%), var(--line) 0); }
