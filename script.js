@@ -444,7 +444,8 @@ function onScroll() {
         const y = window.scrollY;
         const max = document.documentElement.scrollHeight - window.innerHeight;
         const p = max > 0 ? Math.min(1, y / max) : 0;
-        if (navbar) navbar.classList.toggle('scrolled', y > 20);
+        // hysteresis: shrink past 80px, expand only back near the top, so the height change can't re-trigger itself
+        if (navbar) navbar.classList.toggle('scrolled', navbar.classList.contains('scrolled') ? y > 10 : y > 80);
         if (backToTopBtn) {
             backToTopBtn.classList.toggle('visible', y > 350);
             backToTopBtn.style.setProperty('--p', Math.round(p * 100));
