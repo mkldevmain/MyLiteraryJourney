@@ -306,7 +306,7 @@ body.dark-mode .moon-icon { opacity: 1; transform: none; }
 /* ---------- Summary ---------- */
 .feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 64px; counter-reset: feat; }
 .feature-card { counter-increment: feat; padding: 36px 0 44px; border-top: 1px solid var(--line); }
-.feature-card::before { content: counter(feat, upper-roman); display: block; font-family: var(--font-display); font-style: italic; font-size: 3.4rem; line-height: 1; color: var(--brass); margin-bottom: 12px; }
+.feature-card::before { content: counter(feat); display: block; font-family: var(--font-display); font-style: italic; font-size: 3.4rem; line-height: 1; color: var(--brass); margin-bottom: 12px; }
 .feature-card h3 { font-size: 1.7rem; margin-bottom: 14px; }
 .feature-card p { font-size: 1.08rem; max-width: var(--measure); }
 
